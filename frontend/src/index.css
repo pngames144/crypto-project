@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg-main: #0c0814;
+  --bg-card: #150f24;
+  --border-purple: #8b5cf6;
+  --border-gold: #f59e0b;
+  --accent-cyan: #38bdf8;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --text-main: #f3f4f6;
+  --text-muted: #a78bfa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+}
+
+.pixel-card {
+  background-color: var(--bg-card);
+  border: 3px solid var(--border-purple);
+  box-shadow: 5px 5px 0px #06030d;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pixel-card-gold {
+  border-color: var(--border-gold);
+}
+
+input, select {
+  background-color: #090511;
+  border: 2px solid #6d28d9;
+  color: #38bdf8;
+  padding: 0.75rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #facc15;
+}
+
+.btn-pixel {
+  background-color: #059669;
+  border: 3px solid #34d399;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  padding: 0.9rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #064e3b;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-pixel:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #064e3b;
+}
+
+.nav-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  background-color: #1e1b4b;
+  border: 2px solid #4338ca;
+  color: #c7d2fe;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  padding: 0.8rem 0.4rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab-btn.active {
+  background-color: #7c3aed;
+  color: #ffffff;
+  border-color: #facc15;
+  box-shadow: 4px 4px 0px #4c1d95;
+}
+
+.terminal-output {
+  background-color: #05030a;
+  border: 2px solid #3b0764;
+  padding: 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  color: #34d399;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Візуалізація комп'ютерного вузла */
+.pc-screen {
+  background-color: #05030a;
+  border: 2px solid #38bdf8;
+  width: 130px;
+  height: 140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-tower {
+  width: 36px;
+  height: 50px;
+  background-color: #1e293b;
+  border: 2px solid #38bdf8;
+  position: relative;
+  margin-top: 8px;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.pc-tower::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #10b981;
+}
